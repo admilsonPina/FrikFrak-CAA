@@ -2,7 +2,7 @@ package jogo;
 
 import java.util.Scanner;
 
-import frikfrak.Jogador;
+import jogo.Jogador;
 
 public class FrikFrak {
 
