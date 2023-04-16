@@ -673,7 +673,7 @@ private void checarBloqueioBotoes() {
         painelBase.add(painelTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 320, 310));
 
         painelInfoJgo.setBackground(new java.awt.Color(204, 204, 204));
-        painelInfoJgo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Informação do jogo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        painelInfoJgo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Placar do jogo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         painelInfoJgo.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
@@ -1519,7 +1519,9 @@ private void checarBloqueioBotoes() {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new FrikFrak().setVisible(true);
+           FrikFrak frame = new FrikFrak();
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null); // centraliza a janela
         });
     }
 
