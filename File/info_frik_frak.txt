@@ -4,13 +4,15 @@ SOBRE O JOGO
 
 Frik Frak
 
-E um popular jogo de tabuleiro na ¡frica e em outros lugares. Em que cada jogador tem trÍs 
-peÁas e o objectivo È ser o primeiro de modo a formar uma linha (vertical, horizontal ou diagonal),
+E um popular jogo de tabuleiro na √Åfrica e em outros lugares. Em que cada jogador tem tr√™s 
+pe√ßas e o objectivo √© ser o primeiro de modo a formar uma linha (vertical, horizontal ou diagonal),
 ao mesmo tempo impedir que o oponente de fazer o mesmo.
 
-Para iniciar e reiniciar o jogo sÛ apertar o bot„o "Novo jogo" ;
+Para iniciar e reiniciar o jogo s√≥ apertar o bot√£o "Jogar" ;
 
-A cada vitÛria o jogo ir· anotar a vitÛria do jogador e mostrar· o resultado no placar do jogo.
+A cada vit√≥ria o jogo ir√° anotar a vit√≥ria do jogador e mostrar√° o resultado no placar do jogo.
 
 --------------------------------------------------------------------------------------------------
-COMO JOGAR ?
+COMO JOGAR 
+Regras
+...
