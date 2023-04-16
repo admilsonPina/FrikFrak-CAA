@@ -1,0 +1,16 @@
+
+SOBRE O JOGO
+-------------------------------------------------------------------------------------------------
+
+Frik Frak
+
+E um popular jogo de tabuleiro na África e em outros lugares. Em que cada jogador tem três 
+peças e o objectivo é ser o primeiro de modo a formar uma linha (vertical, horizontal ou diagonal),
+ao mesmo tempo impedir que o oponente de fazer o mesmo.
+
+Para iniciar e reiniciar o jogo só apertar o botão "Novo jogo" ;
+
+A cada vitória o jogo irá anotar a vitória do jogador e mostrará o resultado no placar do jogo.
+
+--------------------------------------------------------------------------------------------------
+COMO JOGAR ?
