@@ -1,7 +1,7 @@
 package jogo;
 
-import frikfrak.FrikFrak;
-import frikfrak.Jogador;
+import jogo.FrikFrak ;
+import jogo.Jogador ;
 
 public class Jogo {
 
