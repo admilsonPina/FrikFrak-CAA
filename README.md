@@ -1,15 +1,8 @@
 # FrikFrak-CAA
 FrikFrak em java
 
-# Status 
-Em atualização ainda
-
-# Informação 
-- Aplicação completo no branch principal main
-- Modo consola está no branch master
-
 # Status
-*Em atualização 
+* Em atualização 
 
 # informação 
 - Aplicação principal no branch main
