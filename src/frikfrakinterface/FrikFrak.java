@@ -300,6 +300,7 @@ public class FrikFrak extends javax.swing.JFrame {
             bt06.setForeground(Color.RED);
             jogoAcabou = true;
             return true;
+            
         } else if (bt04.getText().equals("O") && bt05.getText().equals("O") && bt06.getText().equals("O")) {
             bt04.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
