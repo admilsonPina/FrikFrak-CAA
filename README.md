@@ -6,7 +6,7 @@ FrikFrak em java
 
 # informação 
 - Aplicação principal no branch main
-- Modo consola no branch master
+- Modo consola(incompleto) no branch master
 
 # SOBRE O JOGO
 -------------------------------------------------------------------------------------------------
@@ -19,10 +19,10 @@ ao mesmo tempo impedir que o oponente de fazer o mesmo.
 
 Para iniciar e reiniciar o jogo só apertar o botão "Jogar" ;
 
-A cada vitoria o jogo ira anotar a vitoria do jogador e mostrara o resultado no placar do jogo.
+A cada vitoria o jogo ira anotar a vitoria do jogador e mostra o resultado no placar do jogo.
 
 --------------------------------------------------------------------------------------------------
-# COMO JOGAR 
+# Como Jogar 
 
 REGRA
 
@@ -32,6 +32,6 @@ REGRA
 - O jogador 1 com peça X inicia a jogada ;
 - Alternadamente o jogador 2 com peça O faz a jogada a seguir ;
 - Cada jogador possui 3 jogadas inicias, preenchendo os espaços em branco ;
-- Depois de fazer as 3 jogadas iniciais colocando as respetivas peças cada um segue-se a regra :
+- Depois de fazer as 3 jogadas iniciais colocando as respetivas peças, segue-se a regra :
 ...
 

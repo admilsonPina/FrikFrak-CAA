@@ -9,6 +9,7 @@ package frikfrakinterface;
 
 import java.awt.Color;
 import java.awt.Desktop;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -72,7 +73,11 @@ public class FrikFrak extends javax.swing.JFrame {
             } else {
                 bt05.setEnabled(false);
             }
-       }
+       } else {
+                lblInfo.setText("Peça bloqueada, tente outra");
+                
+            
+        }
     } 
 }
    private void moverPecaBt02(boolean isVazio) {
@@ -1431,7 +1436,20 @@ public class FrikFrak extends javax.swing.JFrame {
 
     }                                 
 
-    private void btNovoJogoMouseClicked(java.awt.event.MouseEvent evt) {                                        
+    private void btNovoJogoMouseClicked(java.awt.event.MouseEvent evt) {
+        String[] options = {"X", "O"};
+        int choice = JOptionPane.showOptionDialog(null, "Quem joga primeiro?", "Novo Jogo", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+
+    
+        if (choice == 0) {
+        cont = 0;
+        vez();
+        }
+        else if (choice == 1) {
+        cont = 1;
+        vez();
+       }
+        
         bt01.setEnabled(true);
         bt02.setEnabled(true);
         bt03.setEnabled(true);
@@ -1453,7 +1471,6 @@ public class FrikFrak extends javax.swing.JFrame {
         bt07.setText("");
         bt08.setText("");
         bt09.setText("");
-        cont = 0;
         jogada = 0;
         jogoAcabou = false;
         bt01.setForeground(Color.BLUE);
@@ -1465,7 +1482,6 @@ public class FrikFrak extends javax.swing.JFrame {
         bt07.setForeground(Color.BLUE);
         bt08.setForeground(Color.BLUE);
         bt09.setForeground(Color.BLUE);
-        vez();
     }                                       
 
     private void btNovoJogoMousePressed(java.awt.event.MouseEvent evt) {                                        
