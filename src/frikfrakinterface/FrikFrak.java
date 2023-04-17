@@ -17,6 +17,7 @@ import java.awt.Desktop;
 public class FrikFrak extends javax.swing.JFrame {
 
     int xx, xy, cont = 0, jogada = 0, vitX = 0, vitO = 0, empt = 0;
+    private boolean jogoAcabou = false;
 
     public FrikFrak() {
         initComponents();
@@ -118,7 +119,7 @@ public class FrikFrak extends javax.swing.JFrame {
             if (bt06.getText().equals("")) {
                 bt06.setEnabled(true);
             } else {
-                bt04.setEnabled(false);
+                bt06.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
@@ -263,18 +264,16 @@ public class FrikFrak extends javax.swing.JFrame {
        }
     } 
 }
-private void checarBloqueioBotoes() {
-    
-        bt01.setEnabled(true);
-        bt02.setEnabled(true);
-        bt03.setEnabled(true);
-        bt04.setEnabled(true);
-        bt05.setEnabled(true);
-        bt06.setEnabled(true);
-        bt07.setEnabled(true);
-        bt08.setEnabled(true);
-        bt09.setEnabled(true);
-    
+   private void checarBloqueioBotoes(boolean aberto) {
+    bt01.setEnabled(aberto);
+    bt02.setEnabled(aberto);
+    bt03.setEnabled(aberto);
+    bt04.setEnabled(aberto);
+    bt05.setEnabled(aberto);
+    bt06.setEnabled(aberto);
+    bt07.setEnabled(aberto);
+    bt08.setEnabled(aberto);
+    bt09.setEnabled(aberto);
 }
 
 
@@ -285,120 +284,110 @@ private void checarBloqueioBotoes() {
             bt01.setForeground(Color.RED);
             bt02.setForeground(Color.RED);
             bt03.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
+            
         } else if (bt01.getText().equals("O") && bt02.getText().equals("O") && bt03.getText().equals("O")) {
             bt01.setForeground(Color.RED);
             bt02.setForeground(Color.RED);
             bt03.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt04.getText().equals("X") && bt05.getText().equals("X") && bt06.getText().equals("X")) {
             bt04.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt06.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
         } else if (bt04.getText().equals("O") && bt05.getText().equals("O") && bt06.getText().equals("O")) {
             bt04.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt06.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt07.getText().equals("X") && bt08.getText().equals("X") && bt09.getText().equals("X")) {
             bt07.setForeground(Color.RED);
             bt08.setForeground(Color.RED);
             bt09.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
+            
         } else if (bt07.getText().equals("O") && bt08.getText().equals("O") && bt09.getText().equals("O")) {
             bt07.setForeground(Color.RED);
             bt08.setForeground(Color.RED);
             bt09.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt01.getText().equals("X") && bt04.getText().equals("X") && bt07.getText().equals("X")) {
             bt01.setForeground(Color.RED);
             bt04.setForeground(Color.RED);
             bt07.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
+            
         } else if (bt01.getText().equals("O") && bt04.getText().equals("O") && bt07.getText().equals("O")) {
             bt01.setForeground(Color.RED);
             bt04.setForeground(Color.RED);
             bt07.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt02.getText().equals("X") && bt05.getText().equals("X") && bt08.getText().equals("X")) {
             bt02.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt08.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
+            
         } else if (bt02.getText().equals("O") && bt05.getText().equals("O") && bt08.getText().equals("O")) {
             bt02.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt08.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt03.getText().equals("X") && bt06.getText().equals("X") && bt09.getText().equals("X")) {
             bt03.setForeground(Color.RED);
             bt06.setForeground(Color.RED);
             bt09.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
+            
         } else if (bt03.getText().equals("O") && bt06.getText().equals("O") && bt09.getText().equals("O")) {
             bt03.setForeground(Color.RED);
             bt06.setForeground(Color.RED);
             bt09.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt09.getText().equals("X") && bt05.getText().equals("X") && bt01.getText().equals("X")) {
             bt01.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt09.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
+            
         } else if (bt01.getText().equals("O") && bt05.getText().equals("O") && bt09.getText().equals("O")) {
             bt01.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt09.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         if (bt07.getText().equals("X") && bt05.getText().equals("X") && bt03.getText().equals("X")) {
             bt07.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt03.setForeground(Color.RED);
-            vitX += 1;
-            lblVitX.setText(vitX + "");
+            jogoAcabou = true;
             return true;
         } else if (bt03.getText().equals("O") && bt05.getText().equals("O") && bt07.getText().equals("O")) {
             bt07.setForeground(Color.RED);
             bt05.setForeground(Color.RED);
             bt03.setForeground(Color.RED);
-            vitO += 1;
-            lblVitO.setText(vitO + "");
+            jogoAcabou = true;
             return true;
         }
         return false;
@@ -643,7 +632,7 @@ private void checarBloqueioBotoes() {
                                 .addComponent(bt02, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(bt03, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         painelTabLayout.setVerticalGroup(
             painelTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -673,7 +662,7 @@ private void checarBloqueioBotoes() {
         painelBase.add(painelTab, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 320, 310));
 
         painelInfoJgo.setBackground(new java.awt.Color(204, 204, 204));
-        painelInfoJgo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Informação do jogo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        painelInfoJgo.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Placar do jogo", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         painelInfoJgo.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
             }
@@ -722,19 +711,16 @@ private void checarBloqueioBotoes() {
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(painelInfoJgoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblVitX, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel7)
+                            .addComponent(lblVitX, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                         .addGroup(painelInfoJgoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(painelInfoJgoLayout.createSequentialGroup()
                                 .addComponent(jLabel3)
-                                .addGroup(painelInfoJgoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelInfoJgoLayout.createSequentialGroup()
-                                        .addGap(49, 49, 49)
-                                        .addComponent(jLabel10))
-                                    .addGroup(painelInfoJgoLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(lblVitO, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblVitO, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(17, 17, 17)
+                                .addComponent(jLabel10)
                                 .addGap(75, 75, 75))
                             .addGroup(painelInfoJgoLayout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -951,7 +937,7 @@ private void checarBloqueioBotoes() {
         setOpacity((float) 0.7);
         xx = evt.getX();
         xy = evt.getY();
-    }                                       
+    }                         
 
     private void painelBaseMouseReleased(java.awt.event.MouseEvent evt) {                                         
         setOpacity((float) 1.0);
@@ -967,18 +953,18 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt01(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                     
                 } else if (cont % 2 != 0) {
                     bt01.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt01(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada invalida");
             if (cont % 2 == 0 && bt01.getText().equals("X")) {
                 bt01.setText("");
                 jogada -= 1;
@@ -1003,18 +989,18 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt02(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt02.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt02(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada Invalida");
             if (cont % 2 == 0 && bt02.getText().equals("X")) {
                 bt02.setText("");
                 jogada -= 1;
@@ -1037,18 +1023,18 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt04(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                     
                 } else if (cont % 2 != 0) {
                     bt04.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt04(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada Invalida");
             if (cont % 2 == 0 && bt04.getText().equals("X")) {
                 bt04.setText("");
                 jogada -= 1;
@@ -1070,16 +1056,16 @@ private void checarBloqueioBotoes() {
                     bt05.setText("X");
                     cont += 1;
                     jogada += 1;
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt05.setText("O");
                     cont += 1;
                     jogada += 1;
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada Invalida");
             if (cont % 2 == 0 && bt05.getText().equals("X")) {
                 bt05.setText("");
                 jogada -= 1;
@@ -1100,17 +1086,17 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt06(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt06.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt06(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada Invalida");
             if (cont % 2 == 0 && bt06.getText().equals("X")) {
                 bt06.setText("");
                 jogada -= 1;
@@ -1133,17 +1119,17 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt07(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt07.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt07(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada invalida");
             if (cont % 2 == 0 && bt07.getText().equals("X")) {
                 bt07.setText("");
                 jogada -= 1;
@@ -1166,17 +1152,17 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt03(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt03.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt03(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada inválida");
             if (cont % 2 == 0 && bt03.getText().equals("X")) {
                 bt03.setText("");
                 jogada -= 1;
@@ -1199,17 +1185,17 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt08(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt08.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt08(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada inválida");
             if (cont % 2 == 0 && bt08.getText().equals("X")) {
                 bt08.setText("");
                 jogada -= 1;
@@ -1232,17 +1218,17 @@ private void checarBloqueioBotoes() {
                     cont += 1;
                     jogada += 1;
                     moverPecaBt09(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt09.setText("O");
                     cont += 1;
                     jogada += 1;
                     moverPecaBt09(false);
-                    checarBloqueioBotoes();
+                    checarBloqueioBotoes(true);
                 }
             }
         } else {
-            lblInfo.setText("Sem pecas");
+            lblInfo.setText("Jogada inválida");
             if (cont % 2 == 0 && bt09.getText().equals("X")) {
                 bt09.setText("");
                 jogada -= 1;
@@ -1256,166 +1242,185 @@ private void checarBloqueioBotoes() {
     }                                    
 
     private void bt03MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+       if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt03.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}                                
     private void bt06MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+      if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt06.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}                                 
     private void bt01MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+        if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt01.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}
     private void bt02MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+        if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt02.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}                       
     private void bt04MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+       if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt04.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}
     private void bt05MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+       if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt05.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}               
     private void bt07MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+       if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt07.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}            
     private void bt08MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
+       if (!jogoAcabou) { // o jogo ainda não acabou
+        if (podeColocarPeca()) {
+            vez();
+        }
+        
+        if (ganhou()) { 
             lblInfo.setText("O jogador " + bt08.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
         }
-        if (podeColocarPeca()) {
-            vez();
-        }
-    }                                  
-
+    }
+}                          
     private void bt09MouseReleased(java.awt.event.MouseEvent evt) {                                   
-        if (ganhou()) {
-            lblInfo.setText("O jogador " + bt09.getText() + " ganhou!");
-            bt01.setEnabled(false);
-            bt02.setEnabled(false);
-            bt03.setEnabled(false);
-            bt04.setEnabled(false);
-            bt05.setEnabled(false);
-            bt06.setEnabled(false);
-            bt07.setEnabled(false);
-            bt08.setEnabled(false);
-            bt09.setEnabled(false);
-        }
+       if (!jogoAcabou) { // o jogo ainda não acabou
         if (podeColocarPeca()) {
             vez();
         }
-    }                                  
+        
+        if (ganhou()) { 
+            lblInfo.setText("O jogador " + bt09.getText() + " ganhou!");
+            checarBloqueioBotoes(false);
+            if (bt01.getText().equals("X")) { 
+                vitX += 1;
+                lblVitX.setText(vitX + "");
+            } else { 
+                vitO += 1;
+                lblVitO.setText(vitO + "");
+            }
+            jogoAcabou = true;
+        }
+    }
+}                           
 
     private void bt01MouseExited(java.awt.event.MouseEvent evt) {                                 
 
@@ -1519,7 +1524,9 @@ private void checarBloqueioBotoes() {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new FrikFrak().setVisible(true);
+            FrikFrak frame = new FrikFrak();
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null); // centraliza a janela
         });
     }
 
