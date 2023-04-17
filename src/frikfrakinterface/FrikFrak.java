@@ -1251,7 +1251,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt03.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt03.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1271,7 +1271,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt06.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt06.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1311,7 +1311,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt02.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt02.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1331,7 +1331,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt04.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt04.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1351,7 +1351,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt05.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt05.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1371,7 +1371,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt07.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt07.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1391,7 +1391,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt08.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt08.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
@@ -1411,7 +1411,7 @@ public class FrikFrak extends javax.swing.JFrame {
         if (ganhou()) { 
             lblInfo.setText("O jogador " + bt09.getText() + " ganhou!");
             checarBloqueioBotoes(false);
-            if (bt01.getText().equals("X")) { 
+            if (bt09.getText().equals("X")) { 
                 vitX += 1;
                 lblVitX.setText(vitX + "");
             } else { 
