@@ -965,7 +965,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada invalida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt01.getText().equals("X")) {
                 bt01.setText("");
                 jogada -= 1;
@@ -1001,7 +1001,7 @@ public class FrikFrak extends javax.swing.JFrame {
             }
         
         } else {
-            lblInfo.setText("Jogada Invalida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt02.getText().equals("X")) {
                 bt02.setText("");
                 jogada -= 1;
@@ -1035,7 +1035,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada Invalida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt04.getText().equals("X")) {
                 bt04.setText("");
                 jogada -= 1;
@@ -1066,7 +1066,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada Invalida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt05.getText().equals("X")) {
                 bt05.setText("");
                 jogada -= 1;
@@ -1097,7 +1097,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada Invalida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt06.getText().equals("X")) {
                 bt06.setText("");
                 jogada -= 1;
@@ -1130,7 +1130,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada invalida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt07.getText().equals("X")) {
                 bt07.setText("");
                 jogada -= 1;
@@ -1163,7 +1163,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada inválida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt03.getText().equals("X")) {
                 bt03.setText("");
                 jogada -= 1;
@@ -1196,7 +1196,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada inválida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt08.getText().equals("X")) {
                 bt08.setText("");
                 jogada -= 1;
@@ -1229,7 +1229,7 @@ public class FrikFrak extends javax.swing.JFrame {
                 }
             }
         } else {
-            lblInfo.setText("Jogada inválida");
+            lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt09.getText().equals("X")) {
                 bt09.setText("");
                 jogada -= 1;
@@ -1455,6 +1455,7 @@ public class FrikFrak extends javax.swing.JFrame {
         bt09.setText("");
         cont = 0;
         jogada = 0;
+        jogoAcabou = false;
         bt01.setForeground(Color.BLUE);
         bt02.setForeground(Color.BLUE);
         bt03.setForeground(Color.BLUE);
