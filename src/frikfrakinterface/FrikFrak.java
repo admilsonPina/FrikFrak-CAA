@@ -53,7 +53,7 @@ public class FrikFrak extends javax.swing.JFrame {
    private void moverPecaBt01(boolean isVazio) {
       
     if (isVazio) {
-        if (jogada >= 4) {
+        if (jogada >= 4) { 
             bt03.setEnabled(false);
             bt06.setEnabled(false);
             bt07.setEnabled(false);
@@ -61,16 +61,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt09.setEnabled(false);
             if (bt02.getText().equals("")) {
                 bt02.setEnabled(true);
+                bt01.setEnabled(false); // Botão o1 desligado se estiver espaço para movimentar
             } else {
                 bt02.setEnabled(false);
             }
             if (bt04.getText().equals("")) {
                 bt04.setEnabled(true);
+                bt01.setEnabled(false);
             } else {
                 bt04.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt01.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -88,16 +91,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt09.setEnabled(false);
             if (bt01.getText().equals("")) {
                 bt01.setEnabled(true);
+                bt02.setEnabled(false);
             } else {
                 bt01.setEnabled(false);
             }
             if (bt03.getText().equals("")) {
                 bt03.setEnabled(true);
+                bt02.setEnabled(false);
             } else {
                 bt03.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt02.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -115,16 +121,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt09.setEnabled(false);
             if (bt02.getText().equals("")) {
                 bt02.setEnabled(true);
+                bt03.setEnabled(false);
             } else {
                 bt02.setEnabled(false);
             }
             if (bt06.getText().equals("")) {
                 bt06.setEnabled(true);
+                bt03.setEnabled(false);
             } else {
                 bt06.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt03.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -142,16 +151,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt09.setEnabled(false);
             if (bt01.getText().equals("")) {
                 bt01.setEnabled(true);
+                bt04.setEnabled(false);
             } else {
                 bt01.setEnabled(false);
             }
             if (bt07.getText().equals("")) {
                 bt07.setEnabled(true);
+                bt04.setEnabled(false);
             } else {
                 bt07.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt04.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -169,16 +181,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt08.setEnabled(false);
             if (bt03.getText().equals("")) {
                 bt03.setEnabled(true);
+                bt06.setEnabled(false);
             } else {
                 bt03.setEnabled(false);
             }
             if (bt09.getText().equals("")) {
                 bt09.setEnabled(true);
+                bt06.setEnabled(false);
             } else {
                 bt09.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt06.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -196,16 +211,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt09.setEnabled(false);
             if (bt04.getText().equals("")) {
                 bt04.setEnabled(true);
+                bt07.setEnabled(false);
             } else {
                 bt04.setEnabled(false);
             }
             if (bt08.getText().equals("")) {
                 bt08.setEnabled(true);
+                bt07.setEnabled(false);
             } else {
                 bt08.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt07.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -223,16 +241,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt06.setEnabled(false);
             if (bt07.getText().equals("")) {
                 bt07.setEnabled(true);
+                bt08.setEnabled(false);
             } else {
                 bt07.setEnabled(false);
             }
             if (bt09.getText().equals("")) {
                 bt09.setEnabled(true);
+                bt08.setEnabled(false);
             } else {
                 bt09.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt08.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -250,16 +271,19 @@ public class FrikFrak extends javax.swing.JFrame {
             bt07.setEnabled(false);
             if (bt06.getText().equals("")) {
                 bt06.setEnabled(true);
+                bt09.setEnabled(false);
             } else {
                 bt06.setEnabled(false);
             }
             if (bt08.getText().equals("")) {
                 bt08.setEnabled(true);
+                bt09.setEnabled(false);
             } else {
                 bt08.setEnabled(false);
             }
             if (bt05.getText().equals("")) {
                 bt05.setEnabled(true);
+                bt09.setEnabled(false);
             } else {
                 bt05.setEnabled(false);
             }
@@ -955,14 +979,22 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt01.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt01(false);
+                    //N'Pui kel função li pa ,no caso um peça sta impedida de move
+                    if(jogada >=4 && !bt02.getText().equals("")&& !bt04.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                     
                 } else if (cont % 2 != 0) {
                     bt01.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt01(false);
+                    if(jogada >=4 && !bt02.getText().equals("")&& !bt04.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                  }
+                    
                     checarBloqueioBotoes(true);
                 }
             }
@@ -970,7 +1002,7 @@ public class FrikFrak extends javax.swing.JFrame {
             lblInfo.setText("  Error  ");
             if (cont % 2 == 0 && bt01.getText().equals("X")) {
                 bt01.setText("");
-                jogada -= 1;
+                jogada -=1;
                 moverPecaBt01(true);
             } else if (cont % 2 != 0 && bt01.getText().equals("O")) {
                 bt01.setText("");
@@ -991,13 +1023,19 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt02.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt02(false);
+                    if(jogada >=4 && !bt01.getText().equals("")&& !bt03.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt02.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt02(false);
+                    if(jogada >=4 && !bt01.getText().equals("")&& !bt03.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
@@ -1025,14 +1063,20 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt04.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt04(false);
+                    if(jogada >=4 && !bt01.getText().equals("")&& !bt07.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                     
                 } else if (cont % 2 != 0) {
                     bt04.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt04(false);
+                    if(jogada >=4 && !bt01.getText().equals("")&& !bt07.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
@@ -1088,13 +1132,19 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt06.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt06(false);
+                   if(jogada >=4 && !bt03.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt06.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt06(false);
+                    if(jogada >=4 && !bt03.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
@@ -1121,13 +1171,19 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt07.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt07(false);
+                    if(jogada >=4 && !bt04.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt07.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt07(false);
+                    if(jogada >=4 && !bt04.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
@@ -1154,13 +1210,19 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt03.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt03(false);
+                    if(jogada >=4 && !bt06.getText().equals("")&& !bt02.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt03.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt03(false);
+                    if(jogada >=4 && !bt06.getText().equals("")&& !bt02.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
@@ -1187,13 +1249,19 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt08.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt08(false);
+                    if(jogada >=4 && !bt07.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt08.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt08(false);
+                    if(jogada >=4 && !bt07.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
@@ -1220,13 +1288,19 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt09.setText("X");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt09(false);
+                    if(jogada >=4 && !bt06.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 } else if (cont % 2 != 0) {
                     bt09.setText("O");
                     cont += 1;
                     jogada += 1;
-                    moverPecaBt09(false);
+                    if(jogada >=4 && !bt06.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    lblInfo.setText("Peça Bloqueada");
+                    cont -= 1;
+                    }
                     checarBloqueioBotoes(true);
                 }
             }
