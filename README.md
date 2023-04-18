@@ -4,7 +4,7 @@ FrikFrak em java
 ### Status
 * Em atualização 
 
-### informação 
+### Informação 
 - Aplicação principal no branch main
 - Modo consola(incompleto) no branch master
 
@@ -26,19 +26,19 @@ A cada vitoria o jogo ira anotar a vitoria do jogador e mostra o resultado no pl
 
 REGRA
 
-- O jogo inicia(reinicia) quando o clicar no botão ___jogar__ ;
+- O jogo inicia(reinicia) quando o clicar no botão __jogar__ ;
 - O jogo possui __2__ **jogador** modo __Humano__ x __Humano__;
 - Possui um __tabuleiro__ matriz 3x3 ou seja __9__ posições (Ilustração abaixo); 
 - Cada jogador tem direito a __3__ **peças** ;
-- Ao Iniciar o jogo da-se a opcão de escolha de jogado que ira iniciar __X__ ou **O**;
+- Ao Iniciar o jogo da-se a opcão de escolha de jogador que ira iniciar __X__ ou **O**;
 - O jogador que inicia o jogo é o que venceu a disputa entre os 2 ;
 - O jogador X ou O inicia a partida faz a sua jogada e o jogador O ou X faz a sua jogada a seguir;
-- Alternam para criar jogadas para vencer ao mesmo tempo impedir que o oponente de fazer o mesmo;
+- Alternam para criar jogadas para vencer ao mesmo tempo impedir o oponente de fazer o mesmo;
 - O __objectivo__ é ser o primeiro de modo a __formar__ uma **linha (vertical, horizontal ou diagonal)**,
 - Cada jogador possui 3 jogadas inicias, preenchendo os espaços em branco ;
 - Depois de fazer as 3 jogadas iniciais colocando as respetivas peças, segue-se a regra :
 
-- Como a figura ilustra temos uma matriz 3x3 depois das 3  jogadas  inicias :
+Como a figura ilustra temos uma matriz 3x3 depois das 3  jogadas  inicias ocupando as posições
 
                                     "--------------"
                                     |_1__|_2__|_3__|
@@ -57,6 +57,45 @@ REGRA
 
 ## Algoritmo Implementado
 
-...
+### Linguagens e blibliotecas
+
+A implementação do jogo é 100% em **Java**. Usando a bliblioteca *Swing* e sua classe  "AbsoluteLayout" para ter
+posicionamento absoluto dos componentes.
+
+### Desenvolvimento 
+
+Para desenvolver o jogo criei somente uma *classe* **FrikFra**, que tinha que ter em conta em principal esses elementos : **tabuleiro**, **peças** (2) , **regra para ganhar** e **regras para as jogadas** e também uma **interface** amigável ;
+
+#### Etapas
+
+##### Interface
+- Para interface do  jogo foi criada a *classe* **FrikFrak** com uma **extends** com **javax.swing.JFrame**;
+- Criou - se os componentes ;
+- Foi adicionado os componentes; 
+- Interface final foi desenhada conforme o FrikFrak.demo (img) ;
+
+##### Tabuleiro
+- Para o tabuleiro adicionei 9 botões (bt01 á bt09)  posicionando na forma matrizada 3x3 ;
+- Para o fazer basei-me na imagem esqueleto.png que serve de referencial para o jogo da velha identico ao frikfrak ;
+
+##### Peças 
+- Serão necessárias 2 peças **X e O** ;
+- As peças que irão ficar dentro dos botões ;
+
+##### Regras para ganhar
+- As regras pra ganhar o jogo ficarão todas dentro do metodo ganhou() que recebe as condições para ganhar ;
+
+##### Regras para as jogadas 
+- Como os botões é que receben as peças então será nelas que irão se situar as condições para receberem uma jogada ;
+- Exemplo quando o botão 1 (bt01) é clicada executa o metodo **bt01ActionPerformed** que irá rebeceber a condições para peencher ou mover as peças ;
+- O metodo **bt01MouseReleased** nele verifica se jogo não acabou e verifica se jogada feita é de vitória do jogador ;
+
+##### Classe Frik Frak
+....
+
+
+
+
+
 
 

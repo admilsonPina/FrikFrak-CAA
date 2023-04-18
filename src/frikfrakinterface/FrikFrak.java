@@ -46,9 +46,10 @@ public class FrikFrak extends javax.swing.JFrame {
      *
      * @return
      */
-    public boolean podeColocarPeca() {
+   public boolean podeColocarPeca() {
         return jogada < 6;
     }
+    
    private void moverPecaBt01(boolean isVazio) {
       
     if (isVazio) {
@@ -73,11 +74,7 @@ public class FrikFrak extends javax.swing.JFrame {
             } else {
                 bt05.setEnabled(false);
             }
-       } else {
-                lblInfo.setText("Peça bloqueada, tente outra");
-                
-            
-        }
+        } 
     } 
 }
    private void moverPecaBt02(boolean isVazio) {
