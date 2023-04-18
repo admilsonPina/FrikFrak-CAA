@@ -55,6 +55,7 @@ Como a figura ilustra temos uma matriz 3x3 depois das 3  jogadas  inicias ocupan
 8. Se estas na posição 8, so podes deslocar pra posição 7 , 9 e 5 caso estejam vazias se não jogada é invalida;
 9. Se estas na posição 9, so podes deslocar pra posição 6 , 8 e 5 caso estejam vazias se não jogada é invalida;
 
+--------------------------------------------------------------------------------------------------
 ## Algoritmo Implementado
 
 ### Linguagens e blibliotecas
@@ -90,7 +91,7 @@ Para desenvolver o jogo criei somente uma *classe* **FrikFra**, que tinha que te
 - Exemplo quando o botão 1 (bt01) é clicada executa o metodo **bt01ActionPerformed** que irá rebeceber a condições para peencher ou mover as peças ;
 - O metodo **bt01MouseReleased** nele verifica se jogo não acabou e verifica se jogada feita é de vitória do jogador ;
 
-##### Classe Frik Frak
+##### Classe FrikFrak.java
 ....
 
 
