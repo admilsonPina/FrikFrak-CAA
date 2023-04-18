@@ -2,7 +2,8 @@
 FrikFrak em java
 
 ### Status
-* Em atualização 
+* Aplicação **Fechado**
+* Relatório **Em desenvolvimento** 
 
 ### Informação 
 - Aplicação principal no branch main
