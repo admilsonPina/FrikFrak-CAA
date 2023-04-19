@@ -2,12 +2,10 @@
 FrikFrak em java
 
 ### Status
-* Aplicação **Fechado**
-* Relatório **Em desenvolvimento** 
+* **Fechado**
 
 ### Informação 
 - Aplicação principal no branch main
-- Modo consola(incompleto) no branch master
 
 ### SOBRE O JOGO
 -------------------------------------------------------------------------------------------------
@@ -92,12 +90,53 @@ Para desenvolver o jogo criei somente uma *classe* **FrikFra**, que tinha que te
 - Exemplo quando o botão 1 (bt01) é clicada executa o metodo **bt01ActionPerformed** que irá rebeceber a condições para peencher ou mover as peças ;
 - O metodo **bt01MouseReleased** nele verifica se jogo não acabou e verifica se jogada feita é de vitória do jogador ;
 
-##### Classe FrikFrak.java
-....
+### Classe FrikFrak.java
 
+#### Métodos
 
+* vez() 
+É responsável por mudar os jogadores do jogo "Frikfrak". Sempre que o jogador executa a ação ele é chamado e atualiza a mensagem exibida na interface do usuário para indicar o jogador que deve fazer a jogada.
 
+O método funciona da seguinte maneira: ele verifica se a variável "cont" é par ou ímpar. Se for par, significa que é a vez do jogador X, e o método atualiza a mensagem exibida na tela para indicar isso. Caso contrário, a variável "cont" é ímpar, o que significa que é a vez do jogador O, e o método atualiza a mensagem para indicar isso.
 
+* podeColocarPeca()
+O método verifica se o número de jogadas realizadas até o momento (armazenado na variável "jogada") é menor do que 6. Se for o caso, o método retorna verdadeiro, indicando que ainda é possível colocar mais peças no tabuleiro do jogo. Caso contrário, o método retorna falso, indicando que não é possível colocar mais peças.
 
+* moverPecaBt()
+O método recebe um parâmetro booleano chamado "isVazio", que indica se a posição onde a peça atualmente se encontra está vazia.
 
+Se a posição estiver vazia, o código verifica se o número de jogadas já realizadas (variável "jogada") é maior do que 4 (ou seja a ultima jogada para cada peça "jogada 5 X ou O e jogada 6 para O ou X"). Se for, então algumas outras posições no tabuleiro são habilitadas ou desabilitadas, dependendo se a peça pode se mover para elas ou não.
+Para cada botão possui um método moverPecaBt(01 á 09), é ativado quando os botões realizam ações ;
 
+* checarBloqueioBotoes()
+O método recebe um parâmetro booleano chamado "aberto", que indica se os botões devem estar habilitados ou desabilitados.
+O método percorre todos os botões do jogo (bt01 a bt09) e seta o estado de habilitação de cada um para o valor do parâmetro "aberto". Se o valor de "aberto" for verdadeiro, todos os botões serão habilitados. Se for falso, todos os botões serão desabilitados.
+
+Esse método criei para que quando a jogadas forem feitas ela será ativada retornando true desbloqueando todos os botões.
+
+* ganhou()
+O método booleano é responsável por verificar se houve um vencedor. Ele checa todas as possibilidades de combinação de símbolos X e O nos botões do jogo e, caso encontre uma combinação de vitoria, muda a cor do as peças noo botões correspondentes para vermelho e retorna true. Caso nenhuma combinação de vitoria seja encontrada, ele retorna false.
+
+* bt0_ActionPerformed (java.awt.event.ActionEvent evt)
+Metodo aciona quando o botão é clicado. Verifica se o jogador atual pode colocar uma peça naquele botão. Depois Verifica se o botão já está ocupado com uma peça. Se já estiver, mostra uma mensagem na label "lblInfo" informando que a jogada é inválida. Caso contrário, prossegue com a jogada.
+Define a jogada atual com o marcador "X" ou "O", dependendo de qual jogador é a vez de jogar, e atualiza a contagem de jogadas. Também verifica se uma peça foi bloqueada em uma posição específica do tabuleiro e exibe uma mensagem de erro se necessário. O método "checarBloqueioBotoes" é chamado para verificar se algum botão deve ser bloqueado.
+Se o jogador não pode colocar uma peça no botão "bt0*", o método exibe uma mensagem de erro e reverte a jogada anterior, removendo a peça e chamando o método "moverPecaBt0*" para mover a peça para outra posição no tabuleiro.
+
+Para cada botão acontece a mesma performece (0 á 9 excepto o bt05 que não verifica só se botão está bloqueada pois ela nunca estará).
+
+*  bt0_MouseReleased(java.awt.event.MouseEvent evt)
+Aciona quando quando o botão é solto pelo mouse .
+Verifica se o jogo ainda não acabou através da variável "jogoAcabou".
+Verifica se uma peça pode ser colocada no botão através da função "podeColocarPeca()".
+Chama a função "vez()" que alterna entre os jogadores e coloca a peça no botão.
+Verifica se um dos jogadores ganhou através da função "ganhou()".
+Se um jogador ganhou, exibe a mensagem indicando qual jogador venceu e atualiza as estatísticas de vitórias na interface gráfica.
+Define a variável "jogoAcabou" como verdadeira para indicar que o jogo terminou e impede que mais jogadas sejam feitas.
+
+* btNovoJogoMouseClicked(java.awt.event.MouseEvent evt)
+Botão para iniciar e reiniciar o jogo quando é clicada . Apagando e abrindo os conteúdos nos botões e reiniciando as varíaveis de controlo pra realizar as jogadas (jogada, e cont ) ;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Docente: Valério Santos
+Discente: Admilson De Pina
+Instituição: Universidade de Santiago 
+Abril/2023

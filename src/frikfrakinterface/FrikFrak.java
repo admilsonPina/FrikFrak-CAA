@@ -170,6 +170,61 @@ public class FrikFrak extends javax.swing.JFrame {
        }
     } 
 }
+   private void moverPecaBt05(boolean isVazio) {
+      
+    if (isVazio) {
+        if (jogada >4) {
+            if (bt01.getText().equals("")) {
+                bt01.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt01.setEnabled(false);
+            }
+            if (bt02.getText().equals("")) {
+                bt02.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt02.setEnabled(false);
+            }
+            if (bt03.getText().equals("")) {
+                bt03.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt03.setEnabled(false);
+            }
+            if (bt04.getText().equals("")) {
+                bt04.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt04.setEnabled(false);
+            }
+            if (bt06.getText().equals("")) {
+                bt06.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt06.setEnabled(false);
+            }
+            if (bt07.getText().equals("")) {
+                bt07.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt07.setEnabled(false);
+            }
+            if (bt08.getText().equals("")) {
+                bt08.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt08.setEnabled(false);
+            }
+            if (bt09.getText().equals("")) {
+                bt09.setEnabled(true);
+                bt05.setEnabled(false);
+            } else {
+                bt09.setEnabled(false);
+            }
+       }
+    } 
+} 
    private void moverPecaBt06(boolean isVazio) {
       
     if (isVazio) {
@@ -980,7 +1035,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     cont += 1;
                     jogada += 1;
                     //N'Pui kel função li pa ,no caso um peça sta impedida de move
-                    if(jogada == 6 && !bt02.getText().equals("")&& !bt04.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7  && !bt02.getText().equals("")&& !bt04.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -990,7 +1045,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt01.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt02.getText().equals("")&& !bt04.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt02.getText().equals("")&& !bt04.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                   }
@@ -1023,7 +1078,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt02.setText("X");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt01.getText().equals("")&& !bt03.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt01.getText().equals("")&& !bt03.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1032,7 +1087,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt02.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt01.getText().equals("")&& !bt03.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt01.getText().equals("")&& !bt03.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1063,7 +1118,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt04.setText("X");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt01.getText().equals("")&& !bt07.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt01.getText().equals("")&& !bt07.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1073,7 +1128,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt04.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt01.getText().equals("")&& !bt07.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt01.getText().equals("")&& !bt07.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1104,6 +1159,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     cont += 1;
                     jogada += 1;
                     checarBloqueioBotoes(true);
+                    
                 } else if (cont % 2 != 0) {
                     bt05.setText("O");
                     cont += 1;
@@ -1116,9 +1172,11 @@ public class FrikFrak extends javax.swing.JFrame {
             if (cont % 2 == 0 && bt05.getText().equals("X")) {
                 bt05.setText("");
                 jogada -= 1;
+                moverPecaBt05(true);
             } else if (cont % 2 != 0 && bt05.getText().equals("O")) {
                 bt05.setText("");
                 jogada -= 1;
+                moverPecaBt05(true);
             }
         }
     }                                    
@@ -1132,7 +1190,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt06.setText("X");
                     cont += 1;
                     jogada += 1;
-                   if(jogada == 6 && !bt03.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                   if(jogada == 6 && cont >7 && !bt03.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1141,7 +1199,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt06.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt03.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt03.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1171,7 +1229,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt07.setText("X");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt04.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt04.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1180,7 +1238,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt07.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt04.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt04.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1210,7 +1268,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt03.setText("X");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt06.getText().equals("")&& !bt02.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt06.getText().equals("")&& !bt02.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1219,7 +1277,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt03.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt06.getText().equals("")&& !bt02.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt06.getText().equals("")&& !bt02.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1249,7 +1307,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt08.setText("X");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt07.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt07.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1258,7 +1316,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt08.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt07.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt07.getText().equals("")&& !bt09.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1288,7 +1346,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt09.setText("X");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt06.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >7 && !bt06.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1297,7 +1355,7 @@ public class FrikFrak extends javax.swing.JFrame {
                     bt09.setText("O");
                     cont += 1;
                     jogada += 1;
-                    if(jogada == 6 && !bt06.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
+                    if(jogada == 6 && cont >6 && !bt06.getText().equals("")&& !bt08.getText().equals("")&&!bt05.getText().equals("")){
                     lblInfo.setText("Peça Bloqueada");
                     cont -= 1;
                     }
@@ -1502,7 +1560,6 @@ public class FrikFrak extends javax.swing.JFrame {
     private void bt01MouseExited(java.awt.event.MouseEvent evt) {                                 
 
     }                                
-
     private void bt01MouseClicked(java.awt.event.MouseEvent evt) {                                  
 
     }                                 
