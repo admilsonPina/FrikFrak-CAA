@@ -136,10 +136,10 @@ Define a variável "jogoAcabou" como verdadeira para indicar que o jogo terminou
 * btNovoJogoMouseClicked(java.awt.event.MouseEvent evt)
 Botão para iniciar e reiniciar o jogo quando é clicada . Apagando e abrindo os conteúdos nos botões e reiniciando as varíaveis de controlo pra realizar as jogadas (jogada, e cont ) ;
 
-##### Como abrir o jogo e jogar :
+### Como abrir o jogo e jogar :
 
-Ter instalado o java sdk no seu computador.
-Abrir a pasta dist e executar o * FrikFrak.jar .
+-Ter instalado o java sdk no seu computador.
+-Abrir a pasta **dist** e executar o **FrikFrak.jar** .
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
