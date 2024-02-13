@@ -136,7 +136,6 @@ Define a variável "jogoAcabou" como verdadeira para indicar que o jogo terminou
 * btNovoJogoMouseClicked(java.awt.event.MouseEvent evt)
 Botão para iniciar e reiniciar o jogo quando é clicada . Apagando e abrindo os conteúdos nos botões e reiniciando as varíaveis de controlo pra realizar as jogadas (jogada, e cont ) ;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-###### Docente: Valério Santos
-###### Discente: Admilson De Pina
-###### Universidade de Santiago 
+###### Autor: Admilson De Pina
+
 ###### Abril/2023
